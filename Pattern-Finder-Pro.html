@@ -1,0 +1,174 @@
+<!
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pattern Finder</title>
+    </head>
+    
+    <body bgcolor="#ADD8E6" align="center">
+    <h1>Pattern Finder</h1>
+
+    <p><i>(Version 0.7.14)</i></p>
+    <br>
+    <script>
+    /**INSTRUCTIONS -
+ENTER YOUR LETTERS IN THE TWO ARRAYS BELOW AND SEE HOW THE CODE NOTICESS PATERNS
+
+DO NOT COPY CODE WITHOT CREDIT
+2019 Copyright, Kopamed
+
+first script made by Kopamed at 17:06 on the 16th of August written from Kopamed's iphone
+
+time taken to design=2 minutes
+time taken to write the code = 10 minutes
+total time taken= 12 minutes
+
+Alpha version 
+(16 august 2019)- js only (version 0.1.4)
+Next version goals- UI, description, 3<= letter patterns, beuatify, bug fixes
+
+(17 august) js+HTML (version 0.3.8)
+current- improved UI, description
+Next version goals- UI, 3<= letter patterns, beautify, bug fixes + your recomendations, most likely pattern
+
+(18 august) js+html (version 0.3.89)
+current- cleaned the code, fixed a bug
+next version goals- UI 3<= letter patterns,beautify, big fixes, most likely pattern + your reccomendarions
+
+(19 august) js+html (version 0.3.91)
+current- 2019 Copyright, Kopamed, Bug fixes
+next version goals- UI 3<= letter patterns,beautify, big fixes, most likely pattern + your reccomendarions
+
+(21 august) js+html (version 0.5.5)
+current- bug fixes, better input
+next version goals- UI 3<= letter patterns,beautify, big fixes, most likely pattern + your reccomendarions
+
+(25 august) js+html (version 0.7.14)
+current- bug fixes, better input, pattern duplicate remover
+next version goals- UI 3<= letter patterns,beautify, most likely pattern + your reccomendarions
+
+Code is open for modification and I am looking forward to seeing some improved UI;)
+
+please upvote and leave feedback
+
+THANK YOU
+**/
+
+alert("Welcome to the Pattern Finder!")
+
+
+
+var in1 = prompt("Enter your first string")
+var ch1 = [];
+
+var bobfor1 = 0
+
+while (bobfor1<in1.length) {
+ch1[bobfor1]=in1[bobfor1]
+bobfor1+=1
+}
+
+
+
+var in2 = prompt("Enter your second string")
+var ch2 = [];
+
+var bobfor2 = 0
+
+while (bobfor2<
+in2.length) {
+ch2[bobfor2]=in2[bobfor2]
+bobfor2+=1
+}
+
+
+
+
+var total = new Array();
+
+var a=0
+var b=1
+var a2=0
+var b2=1
+var c=0
+
+function solve(){
+    
+    if (ch1[a]==ch2[a2]){
+        
+        if (ch1[b]==ch2[b2]){
+    
+        total[c]=ch1[a]+ch1[b]
+        c+=1
+            
+        }
+    }
+
+    if (b2==ch2.length){
+        a2=0
+        b2=1
+        a+=1
+        b+=1
+    }
+a2+=1
+b2+=1
+}
+
+while (b<ch1.length&a<ch1.length-1) {
+    solve()
+}
+var total_test = [...new Set(total)]
+
+
+
+document.write("Your first string:  "+ch1)
+document.write("<br>")
+document.write("Your second string:  "+ch2)
+document.write("<br>")
+document.write("<br>")
+
+
+
+
+
+var last=0
+for(last;last<total_test.length;last++){}
+
+
+
+
+
+
+if (last==1){
+    document.write(last+" pattern was found:<br>")
+}
+else if (last==0){
+document.write("Sorry, no patterns were found")  
+}
+else {
+    document.write(last+" patterns were found:<br>")
+}
+
+
+
+
+for (let v in total_test) {
+    document.write(total_test[v])
+    document.write("<br>")
+}
+
+
+
+
+    </script>
+<h6 align="center" class="cpr">Copyright ©2019 Kopamed</h6>    <br><br><br><br><br><br><br><br><h5>Inspired by Mark Roberts' <br><a href="https://m.youtube.com/watch?v=PmlRbfSavbI">I used machine learning to hack baseball</a><br> video</h5></h5><h6>If you are unsure what to do, read the instructions located in HTML")</h6>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h5>Comment on what needs to be improved and if you liked the program, leave an upvote!</h5>
+<h4>Look forward to seeing your feedback ;)</h4>
+    </body>
+    
+</html>
