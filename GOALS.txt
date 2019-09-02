@@ -1,0 +1,5 @@
+#GOALS -
+
+1.Improve UI
+2.Add "The most likely pattern" module
+3.Detect more than 2-letter patterns
